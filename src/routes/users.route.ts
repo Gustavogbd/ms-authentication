@@ -10,7 +10,7 @@ const usersRoute = Router();
 
 usersRoute.get('/users', (req: Request, res: Response, next: NextFunction) => {
     const users = [{ userName: 'Gustavo' }];
-    res.status(StatusCodes.OK).send( users );
+    res.status(StatusCodes.OK).send(users);
 
 });
 
@@ -34,8 +34,7 @@ usersRoute.put('/users/:uuid', (req: Request<{ uuid: string }>, res: Response, n
 });
 
 usersRoute.delete('/users/:uuid', (req: Request<{ uuid: string }>, res: Response, next: NextFunction) => {
-    const uuid = req.params.uuid;
-    res.status(StatusCodes.OK).send({ uuid });
+    res.sendStatus(StatusCodes.OK);
 });
 
 
