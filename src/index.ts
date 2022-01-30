@@ -9,8 +9,8 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use(usersRoute);
 app.use(statusRoute);
+app.use(usersRoute);
 app.use(authorizationRoute);
 
 app.use(errorHandler);
